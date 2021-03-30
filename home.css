@@ -14,11 +14,15 @@
     height: 20rem;
     width: 30rem;
     text-align: center;
-    margin-left: 20%;
+    margin-left: 30%;
 }
 
 .about {
     height: 80%;
     width: 80%;
     margin-left: 10%;
+}
+
+.trademark {
+    font-size: 10px;
 }
