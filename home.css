@@ -2,27 +2,38 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 };
 
 .background {
-    height: 100%;
-    width: 100%;
     display: flex;
+    border: 5px solid black;
+    background: url(./images/brick.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
+
 .card {
-    height: 20rem;
-    width: 30rem;
+    height: 35rem;
+    width: 40rem;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 25%;
+    background-color: #c4c4c4;
+    z-index: 1;
+    position: absolute;
 }
 
 .about {
-    height: 80%;
+    height: 40%;
     width: 80%;
     margin-left: 10%;
+    padding: 2rem;
 }
 
 .trademark {
     font-size: 10px;
-}
+    width: 30rem;
+    margin-left: 5rem;
+};
