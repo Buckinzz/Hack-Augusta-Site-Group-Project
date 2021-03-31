@@ -61,7 +61,7 @@
 
 /* Responsiveness */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
     .contact a img {
         width: 25%;
     }
@@ -70,4 +70,25 @@
         width: 100%;
     }
 }
+
+@media (max-height: 600px) {
+    .contact a img {
+        width: 13%;
+    }
+    .card {
+        height: 90vh;
+        width: 90%
+    }
+}
+
+/* hard time making responsive for galaxy fold, surface duo, ipad pro, ipad, iphone 5/SE,  */
+/* @media (max-width: px) {
+    .contact a img {
+        width: 10%;
+    }
+    .card {
+        height: 100%;
+        width: 100%;
+    }
+} */
 
