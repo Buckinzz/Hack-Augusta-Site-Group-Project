@@ -3,18 +3,14 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-};
-
-body {
-    background-color: black;
 }
 
+
 .background {
-    background: url(./images/brick.jpg);
+    background: url("./images/brick.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,29 +18,56 @@ body {
 
 
 .card {
-    height: 34rem;
-    width: 40rem;
+    height: 75%;
+    width: 50%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #c4c4c4;
+    padding: 1rem;
+}
+
+.logo {
+    background: url("./images/Hacklogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 25%;
+    width: 100%;
 }
 
 .about {
-    height: 40%;
-    width: 80%;
-    margin-left: 10%;
-    padding: 2rem;
+    height: 35%;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    height: 30%;
+    width: 100%;
 }
 
 .copyright {
     font-size: 10px;
-    width: 30rem;
-    margin-left: 5rem;
-};
+    height: 10%;
+    width: 100%;
+}
+
 
 /* Responsiveness */
 
-@media only screen and (max-width: 650px) {
-    body {
-        background-color: lightblue;
+@media (max-width: 650px) {
+    .contact a img {
+        width: 25%;
+    }
+    .card {
+        height: 100vh;
+        width: 100%;
     }
 }
+
