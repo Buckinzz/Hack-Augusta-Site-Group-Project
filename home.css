@@ -58,6 +58,11 @@
     width: 100%;
 }
 
+.about a {
+    color: #18206F;
+    text-decoration: none;
+}
+
 
 /* Responsiveness */
 
