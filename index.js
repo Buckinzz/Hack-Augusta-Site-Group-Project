@@ -22,3 +22,7 @@ app.listen(PORT, () => {
 app.get('/public/*', (req, res) => {
 	res.sendFile(path.join(__dirname, req.url));
 });
+
+app.get('*', (req, res) => {
+	res.send('404');
+});
