@@ -1,0 +1,114 @@
+/* Body & Background Image */
+body {
+    background-image: url("./images/login-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Container Styling */
+/* div { 
+    width: 454px;
+    height: 680px;
+    padding: auto;
+    border: 1px solid black;
+} */
+.flex-container {
+    display: flex;
+    text-align: center;
+    background-color: #ffffff;
+    flex-direction: column;
+    box-sizing: content-box;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.heading {
+    font-size: 36px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* Form Properties */
+.form {
+    font-size: 24px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+#name,
+#pwd {
+    width: 15rem;
+    border: 1px solid black;
+}
+/* Message Box */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #00008b;
+    color: white;
+    width: 5rem;
+}
+
+/* Media Resolution */
+@media (max-width: 500px) {
+    .flex-container {
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (max-height: 500px) {
+    .flex-container {
+        border: none;
+    }
+    .header {
+        display: block;
+        padding-top: 15%;
+    }
+}
