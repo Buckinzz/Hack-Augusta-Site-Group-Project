@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a,
+button {
+    position: relative;
+    z-index: 2;
+}
+
+canvas {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card {
+    height: 75%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.logo {
+    background: url("/public/img/Hacklogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 25%;
+    width: 100%;
+}
+
+.about {
+    height: 35%;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    height: 30%;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 10px;
+    height: 10%;
+    width: 100%;
+}
+
+.about a {
+    color: #18206f;
+    text-decoration: none;
+}
+
+button {
+    transition: 1s;
+    border-radius: 5px;
+    /* box-shadow: 2px 4px 10px 1px rgba(0,0,0,0.3); */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    transform: scale(0);
+}
+
+/* Responsiveness */
+
+@media (max-width: 700px) and (min-height: 525px) {
+    .contact a img {
+        height: 40%;
+        width: auto;
+    }
+    .card {
+        height: 100vh;
+        width: 100%;
+    }
+    .about {
+        height: 40%;
+    }
+}
+
+/* This fixes the issue amongst phone screens, tho portrait mode had to loose the brick around the edges */
+@media (max-height: 500px) and (min-width: 525px) {
+    .contact a img {
+        width: 10%;
+        height: auto;
+    }
+    .card {
+        height: 100vh;
+        width: 100%;
+    }
+    .contact {
+        margin-top: 5%;
+    }
+}
+
+/* hard time making responsive for galaxy fold, surface duo, ipad pro, ipad,  */
