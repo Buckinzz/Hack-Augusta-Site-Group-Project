@@ -18,11 +18,33 @@ app.listen(PORT, () => {
 	console.log(`>>> Server Running On Port ${PORT} <<<`);
 });
 
+// get request to root
+app.get('/', (req, res) => {
+	res.send('home');
+});
+
+// get request to home
+app.get('/home', (req, res) => {
+	res.send('home');
+});
+
+// get request login
+app.get('/login', (req, res) => {
+	res.send('login');
+});
+
+// get request dashboard
+app.get ('/dashboard', (req, res) => {
+	res.send('dashboard');
+});
+
 // get request to public
 app.get('/public/*', (req, res) => {
 	res.sendFile(path.join(__dirname, req.url));
 });
 
+// get 404 catch all
 app.get('*', (req, res) => {
 	res.send('404');
 });
+
