@@ -1,0 +1,295 @@
+body
+{
+    background: #22272F;
+    height: 100vh;
+    overflow-y: hidden;
+
+    /* Starts Flexibility. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Prevents Ribbon from encountering errors with opaque backgrounds */
+.non-semantic-protector
+{
+    position: relative; z-index: 1;
+}
+
+/* The ribbon is based around the use of a 16px font-size, an 24px Vertical Rhythm. We'll use ems for scalability.
+Font size can be change, but will likely force readjustment of the Ribbon.
+*/
+.ribbon
+{
+    font-family: 'Zilla Slab', serif; !important;/* Overrides all style rules */
+    font-size: 16px !important;
+
+    width: 300px;
+    height: 35px;
+    position: relative;
+
+    /*background: #064CBF;*/
+    background: #CBABA2;
+    color: #212A39;
+
+    text-align: center;
+
+    border-radius: 7px;
+    padding: 1em 2em;
+    margin: 2em auto 3em; /* 24px VR */
+
+
+}
+
+.ribbon:before, .ribbon:after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #CBABA2;
+    z-index: -1;
+}
+
+.ribbon:before
+{
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+    border-radius: 7px;
+}
+
+.ribbon:after
+{
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+    border-radius: 7px;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after
+{
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: dotted; /*  change later */
+    border-color: #CBABA2 transparent transparent transparent;
+    bottom: -1em;
+}
+
+.ribbon .ribbon-content:before
+{
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after
+{
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+
+
+/* Animation for Ribbon */
+@-webkit-keyframes swinging
+{
+    0%
+    {
+        -webkit-transform: rotate(10deg);
+    }
+    50%
+    {
+        -webkit-transform: rotate(-5deg)
+    }
+    100%
+    {
+        -webkit-transform: rotate(10deg);
+    }
+}
+
+@keyframes swinging
+{
+    0%
+    {
+        transform: rotate(10deg);
+    }
+    50%
+    {
+        transform: rotate(-5deg)
+    }
+    100%{transform: rotate(10deg);
+    }
+}
+
+.swingimage
+{
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
+    animation: swinging 3.5s ease-in-out forwards infinite;
+    animation-delay: 5s;
+}
+/* Animated Background */
+
+.shapes
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.shapes li
+{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 28px;
+    height: 4px;
+    background: #C4BDC8;
+    animation: animate 25s linear infinite;
+    bottom: calc(-150px - 40vh);
+}
+
+.shapes li:nth-child(1)
+{
+    left: 25%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 1s;
+    animation-duration: 20s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C4BDC8;
+}
+
+.shapes li:nth-child(2)
+{
+    left: 10%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 2s;
+    animation-duration: 25s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #CC5B71;
+}
+
+.shapes li:nth-child(3)
+{
+    left: 70%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 3s;
+    animation-duration: 20s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C9D0C6;
+}
+
+.shapes li:nth-child(4)
+{
+    left: 40%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C9D0C6;
+}
+
+.shapes li:nth-child(5)
+{
+    left: 65%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 20s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C9D0C6;
+}
+
+.shapes li:nth-child(6)
+{
+    left: 75%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 25s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: rgba(114, 63, 145, 0.1);
+}
+
+.shapes li:nth-child(7)
+{
+    left: 35%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 30s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C22502 ;
+}
+
+.shapes li:nth-child(8)
+{
+    left: 50%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 35s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: rgba(114, 63, 145, 0.1);
+}
+
+.shapes li:nth-child(9)
+{
+    left: 20%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 40s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C9D0C6;
+}
+
+.shapes li:nth-child(10)
+{
+    left: 85%;
+    width: 28px;
+    height: 4px;
+    animation-delay: 0s;
+    animation-duration: 45s;
+    border-radius: 50%;
+    border-top-left-radius: 0 !important;
+    background: #C22502 ;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50%
+    {
+        transform: translateY(-60vh) rotate(360deg);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-120vh) rotate(720deg);
+        opacity: 0;
+    }
+}

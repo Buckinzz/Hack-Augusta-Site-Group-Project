@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/dashboardBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container {
+    width: 75%;
+    height: 60%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.logo {
+    /* border: 1px solid blue; */
+    height: 20%;
+    margin-bottom: 1rem;
+    display: flex;
+    background: url('/HackAugusta_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.greeting {
+    /* border: 1px solid red; */
+    height: 10%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.drawing {
+    /* border: 1px solid purple; */
+    height: 60%;
+    margin-bottom: 1rem;
+    display: flex;
+    background: url(https://images.unsplash.com/photo-1551415923-31d2072bc248?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.controls {
+    /* border: 1px solid green; */
+    height: 10%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 0 3rem;
+    /* padding: 0.2rem 2rem; */
+    width: 10%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover {
+    filter: brightness(50%);
+}
+
+@media (max-width:1100px) {
+    .controls {
+        flex-direction: column;
+        height: 15%;
+        justify-content: space-between;
+    }
+    button {
+        width: 50%;
+        margin: 0 0.5rem;
+    }
+    .logo {
+        margin-bottom: 0;
+    }
+    .drawing {
+        margin-bottom: 1rem;
+    }
+    .greeting  {
+        height: 5%;
+        justify-content: center;
+    }
+}
+
+@media(max-width:500px) {
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+    .controls {
+        justify-content: space-around;
+    }
+}
