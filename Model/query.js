@@ -61,11 +61,24 @@ function getUnapproved(){
     });
 }
 
+function addSketch(sketchData){
+    return new Promise((resolve,reject) => {
+        connection.query('INSERT INTO sketches sketch_data VALUES(?)',[sketchData], error => {
+            if(error){
+                reject(error);
+            } else {
+                resolve();
+            }
+        });
+    })
+}
+
 module.exports = {
     getUsername,
     getPassword,
     getApproved,
-    getUnapproved
+    getUnapproved,
+    addSketch
 }
 
 // connection.end();
