@@ -5,6 +5,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 // requiring path
 const path = require('path');
+// requiring queries
+const query = require('./Model/query');
 
 // setting view engine to use ejs
 app.set('view engine', 'ejs');
@@ -38,10 +40,15 @@ app.get('/dashboard', (req, res) => {
 	res.send('dashboard');
 }); 
 
-app.post('/save', (req, res) => {
-	const id = req.body.id;
-	const img = req.body.img;
-})
+app.post('/save', async(req, res) => {
+	try {
+		const img = req.body.img;
+		await query.addSketch(img);
+		res.end('saved');
+	} catch(error) {
+		res.end(error);
+	}
+});
 
 // get request to public
 app.get('/public/*', (req, res) => {
