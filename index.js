@@ -34,9 +34,14 @@ app.get('/login', (req, res) => {
 });
 
 // get request dashboard
-app.get ('/dashboard', (req, res) => {
+app.get('/dashboard', (req, res) => {
 	res.send('dashboard');
-});
+}); 
+
+app.post('/save', (req, res) => {
+	const id = req.body.id;
+	const img = req.body.img;
+})
 
 // get request to public
 app.get('/public/*', (req, res) => {
