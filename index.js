@@ -20,22 +20,22 @@ app.listen(PORT, () => {
 
 // get request to root
 app.get('/', (req, res) => {
-	res.send('home');
+	res.render('../views/home.ejs');
 });
 
-// get request to home
+// get request to home, catches all types of get requests
 app.get('/home', (req, res) => {
-	res.send('home');
+		res.render(`../views/home.ejs`)
 });
 
 // get request login
 app.get('/login', (req, res) => {
-	res.send('login');
+	res.render('../views/login.ejs');
 });
 
 // get request dashboard
 app.get ('/dashboard', (req, res) => {
-	res.send('dashboard');
+	res.render('../views/dashboard.ejs');
 });
 
 // get request to public
@@ -45,6 +45,10 @@ app.get('/public/*', (req, res) => {
 
 // get 404 catch all
 app.get('*', (req, res) => {
-	res.send('404');
+		res.render('../views/404.ejs');
 });
+
+// app.post('../views/login.ejs', (req, res) => {
+	
+// });
 
